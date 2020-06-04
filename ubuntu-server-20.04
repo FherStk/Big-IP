@@ -11,5 +11,5 @@
 #
 # By default this script does nothing.
 IP=$(/sbin/ip addr show enp0s3 | grep 'inet ' | cut -d: -f2 | awk '{ print $2}' | awk -F/ '{ print $1}')
-toilet -f bigmono9 -t $IP > /etc/issue
+toilet -f bigmono9 -w 100 $IP > /etc/issue
 exit 0
